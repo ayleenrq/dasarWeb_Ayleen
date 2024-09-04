@@ -1,5 +1,6 @@
 .tulisan_warna {
     color: blue;
     text-align: center;
+    /* garis bawah */
     text-decoration: underline;
 }
