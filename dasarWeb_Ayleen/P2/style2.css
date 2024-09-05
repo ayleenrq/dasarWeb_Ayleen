@@ -19,3 +19,22 @@ body {
     box-sizing: border-box;
     display: flex;
 }
+
+.sidebar-satu {
+    flex: 0.5;
+    order: 1;
+    text-align: left;
+}
+
+.kolom-utama {
+    flex: 1.5;
+    order: 2;
+    text-align: left;
+    width: 200px;
+}
+
+.sidebar-dua {
+    flex: 0.5;
+    order: 3;
+}
+
