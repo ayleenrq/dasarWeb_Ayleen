@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Nama Lengkap</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f7c9c9;
+                background-image: url('../P2/image.png');
+                background-size: cover;
+            }
+            fieldset {
+                border-radius: 12px;
+                padding: 20px;
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset required style="border-radius: 12px;" >
+            <form id="nameForm" onsubmit="return validateForm()">
+                <br>
+                <label for="firstName">First Name : </label>
+                <input type="text" id="firstName" name="firstName" style="margin-left: 2px;">
+                <br><br>
+                <label for="lastName">Last Name : </label>
+                <input type="text" id="lastName" name="lastName" style="margin-left: 4px;">
+                <br><br><br>
+                <input style="margin: auto; display: block; background-color: rgb(252, 197, 213);" type="submit" value="Submit">
+                <br>
+            </form>
+        </fieldset>
+        <script>  
+            function validateForm() {        
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                
+                if ((firstName.trim() === "") && (lastName.trim() === "")) {
+                    alert("Nama depan dan Nama belakang harus diisi!");
+                    return false;
+                } else if (firstName.trim() === "") {	
+                    alert("Nama depan harus diisi!");
+                    return false;
+                } else if (lastName.trim() === "") {	
+                    alert("Nama belakang harus diisi!");
+                    return false;
+                } else {
+                    alert("Form berhasil dikirim!");
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>
