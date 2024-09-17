@@ -31,4 +31,15 @@ echo "Hasil (a) lebih kecil dari (b) = $hasilLebihKecil <br>";
 echo "Hasil (a) lebih besar dari (b) = $hasilLebihBesar <br>";
 echo "Hasil (a) lebih kecil sama dengan (b) = $hasilLebihKecilSama <br>";
 echo "Hasil (a) lebih besar sama dengan (b) = $hasilLebihBesarSama <br>";
+
+$hasilAnd = $a && $b;
+$hasilOr = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB =  !$b;
+
+echo "<br><br>Hasil dari Operator Logika a = $a dan b = $b <br><br>";
+echo "Hasil AND (a dan b) = $hasilAnd <br>";
+echo "Hasil OR (a atau b) = $hasilOr <br>";
+echo "Hasil NOT (a) = $hasilNotA <br>";
+echo "Hasil NOT (b) = $hasilNotB <br>";
 ?>
