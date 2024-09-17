@@ -64,4 +64,11 @@ $a = 10;
 $a %= $b;
 echo "Hasil modulus (a %= b) = $a <br>";
 
+$a = 10;
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;  
+
+echo "<br><br>Hasil dari Operator Identik a = $a dan b = $b <br><br>";
+echo "Hasil (a) identik dengan (b) = $hasilIdentik <br>";
+echo "Hasil (a) tidak identik dengan (b) = $hasilTidakIdentik <br>";
 ?>
