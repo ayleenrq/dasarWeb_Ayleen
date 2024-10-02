@@ -62,7 +62,7 @@
                     $rataRata = $totalUmur / count($data);
                     ?>
             </table>
-            <h2><?php echo "Rata-rata Umur Siswa: " . $rataRata; ?></p>
+            <h2><?php echo "Rata-rata Umur Siswa: " . $rataRata; ?></h2>
         </div>
     </body>
 </html>
