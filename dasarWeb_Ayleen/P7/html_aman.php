@@ -37,13 +37,22 @@
             
             <?php 
             $input = "";
+            $email = "";
             $output = "";
+            $outputEmail = "";
             
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $input = $_POST['input'];
+                $email = $_POST['email'];
                 $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+                $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 
-                $output = "Nama : " . $input;
+                // Validasi email
+                if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $output = "Nama: " . $input . "<br>Email: " . $email;
+                } else {
+                    $outputEmail = "Email tidak valid, silakan masukkan email yang benar.";
+                }
             }
             ?>
 
@@ -51,12 +60,18 @@
                 <label for="input">Nama:</label>
                 <input type="text" name="input" id="input" style="margin-left: 2px; width: 300px;" value="<?php echo $input; ?>" required>
                 <br><br>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" style="margin-left: 2px; width: 300px;" value="<?php echo $email; ?>" required>
+                <br><br>
                 <input style="margin: auto; display: block; background-color: rgb(252, 197, 213);" type="submit" name="submit" value="Submit">
             </form>
             
             <?php 
             if (!empty($output)) {
                 echo "<div class='output'>" . $output . "</div>";
+            }
+            if (!empty($outputEmail)) {
+                echo "<div class='error'>" . $outputEmail . "</div>";
             }
             ?>
         </fieldset>
