@@ -46,4 +46,15 @@ $text = 'I like apple pie. I like ape pie.';
 $new_text = preg_replace($pattern, 'banana', $text);
 echo $new_text; // Output: I like banana pie. I like banana pie.
 
+echo"<br><br>";
+
+$pattern = '/o{1,2}/'; // Mencocokkan karakter 'o' yang muncul 1 hingga 2 kali
+$text = 'good food ghost box cool'; 
+ 
+if (preg_match_all($pattern, $text, $matches)) { 
+    echo "Cocokkan ditemukan: " . implode(', ', $matches[0]); 
+} else { 
+    echo "Tidak ada yang cocok!"; 
+}
+
 ?>
