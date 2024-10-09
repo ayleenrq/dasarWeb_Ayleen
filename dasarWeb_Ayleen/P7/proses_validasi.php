@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Ambil data dari formulir
+    // Ambil data dari request AJAX
     $nama = $_POST['nama'];
     $email = $_POST['email'];
 
@@ -30,3 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo 'Data berhasil dikirim: Nama = ' . $nama . ', Email = ' . $email;
     }
 }
+?>
