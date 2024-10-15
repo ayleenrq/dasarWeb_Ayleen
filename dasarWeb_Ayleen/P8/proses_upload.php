@@ -1,8 +1,7 @@
 <?php
-// Lokasi penyimpanan file yang diunggah
-$targetDirectory = "documents/";
+// Mengubah lokasi penyimpanan gambar yang diunggah
+$targetDirectory = "gambar/";
 
-// Periksa apakah direktori penyimpanan ada, jika tidak maka buat
 if (!file_exists($targetDirectory)) {
     mkdir($targetDirectory, 0777, true);
 }
@@ -10,18 +9,17 @@ if (!file_exists($targetDirectory)) {
 if ($_FILES['files']['name'][0]) {
     $totalFiles = count($_FILES['files']['name']);
 
-    // Loop melalui semua file yang diunggah
     for ($i = 0; $i < $totalFiles; $i++) {
         $fileName = $_FILES['files']['name'][$i];
         $targetFile = $targetDirectory . $fileName;
 
-        // Pindahkan file yang diunggah ke direktori penyimpanan
+        // Pindahkan gambar yang diunggah ke direktori penyimpanan gambar
         if (move_uploaded_file($_FILES['files']['tmp_name'][$i], $targetFile)) {
-            echo "File $fileName berhasil diunggah.<br>";
+            echo "Gambar $fileName berhasil diunggah.<br>";
         } else {
-            echo "Gagal mengunggah file $fileName.<br>";
+            echo "Gagal mengunggah Gambar $fileName.<br>";
         }
     }
 } else {
-    echo "Tidak ada file yang diunggah.";
+    echo "Tidak ada Gambar yang diunggah.";
 }
