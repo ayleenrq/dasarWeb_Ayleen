@@ -2,7 +2,12 @@ $(document).ready(function() {
     $("#upload-form").submit(function(e) {
         e.preventDefault();
 
-        var formData = new FormData(this);
+        let data = document.getElementById("file").files
+
+        var formData = new FormData();
+        for (var i = 0; i < data.length; i++) {
+            formData.append('files[]', data[i]);
+        }
 
         $.ajax({
             type: 'POST',
