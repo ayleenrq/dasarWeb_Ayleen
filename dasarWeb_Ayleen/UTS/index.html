@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SKINTIFIC</title>
+
+        <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendors/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #fff; border-bottom: 2px solid #ccc;">
+            <div class="container">
+                <a class="navbar-brand fw-bold mx-3" href="#">Skintific</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active" aria-current="page" href="#" onclick="setActive(this)">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#product-list" onclick="setActive(this)">Best Sellers</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#review" onclick="setActive(this)">Rating</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#contact" onclick="setActive(this)">Contact</a>
+                        </li>
+                    </ul>
+                    <script>
+                        function setActive(element) {
+                            const navLinks = document.querySelectorAll('.nav-link');
+                            navLinks.forEach(link => {
+                                link.classList.remove('active');
+                            });
+                            
+                            element.classList.add('active');
+                        }
+                    </script>
+                    <div class="d-flex">
+                        <a href="#" class="nav-link me-3"><i class="bx bx-cart fs-4"></i></a>
+                        <a href="#" class="nav-link"><i class="bx bx-user fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <section class="header-section" id="header">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-md-6">
+                            <h1 class="text-orange fw-bold">SKINTIFIC</h1>
+                            <h1></span><span class="text-primary">Best</span> Skincare Products</h1><br>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente odio esse voluptas distinctio tenetur cum eveniet consequatur
+                                cumque ratione, corporis rerum qui eum vitae in neque eaque accusantium nihil ullam praesentium! Corporis ducimus recusandae 
+                                nemo voluptatibus distinctio eos.</p><br>
+                            <a href="#" class="header-skill d-inline-flex align-items-center gap-2 fw-semibold"> <i class="bx bx-right-arrow-alt fs-4"></i>
+                                Brightening 
+                            </a><br>
+                            <a href="#" class="header-skill d-inline-flex align-items-center gap-2 fw-semibold"> <i class="bx bx-right-arrow-alt fs-4"></i>
+                                Acne
+                            </a><br>
+                            <a href="#" class="header-skill d-inline-flex align-items-center gap-2 fw-semibold"> <i class="bx bx-right-arrow-alt fs-4"></i>
+                                Normal Skin
+                            </a><br>
+                            <a href="#" class="header-skill d-inline-flex align-items-center gap-2 fw-semibold"> <i class="bx bx-right-arrow-alt fs-4"></i>
+                                Dry Skin
+                            </a><br>
+                            <a href="#" class="header-skill d-inline-flex align-items-center gap-2 fw-semibold"> <i class="bx bx-right-arrow-alt fs-4"></i>
+                                Sensitive Skin 
+                            </a><br>
+
+                            <div class="d-flex align-items-center gap-4 mt-5">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h2 class="header-skill fw-bold mb-0">
+                                        10jt++
+                                    </h2>
+                                    <p class="text-secondary fs-7 mb-0">
+                                        Total penjualan <br/> per-tahun
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <h2 class="header-skill fw-bold mb-0">
+                                        4.9
+                                    </h2>
+                                    <p class="text-secondary fs-7 mb-0">
+                                        Rating <br/> Penjualan
+                                    </p>
+                                </div>
+                            </div><br><br>
+
+                            <a href="#" class="btn btn-primary">Buy Now</a><br><br><br>
+                        </div>
+
+                        <div class="col-md-5">
+                            <img src="images/image.png" alt="" class="header-img">
+                        </div>
+                    </div><br><br><br>
+
+                    <!-- Main -->
+                    <main>
+                        <div id="product-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-6 mb-3 text-center justify-content-center">
+                            <div class=" w-100 pb-md-4 mx-auto text-center pt-5 border-top"><br><br>
+                                <h1 class="text-orange fw-bold">Best Sellers</h1><br>
+                                <p class="fs-6 w-75 t mx-auto text-body-secondary">Quickly build an effective pricing table for your potential customers 
+                                    with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p><br>
+                            </div>
+                            <script>
+                                // Data produk
+                                const products = [
+                                    { name: 'Product 1', price: 'Rp. 99.000', imgSrc: 'images/product_1.png', usersIncluded: 'Set Skin Barier' },
+                                    { name: 'Product 2', price: 'Rp. 150.000', imgSrc: 'images/product_2.jpg', usersIncluded: 'Dark Spot Serum' },
+                                    { name: 'Product 3', price: 'Rp. 200.000', imgSrc: 'images/product_3.jpg', usersIncluded: 'All Perfect Cushion' },
+                                    { name: 'Product 4', price: 'Rp. 250.000', imgSrc: 'images/product_4.jpg', usersIncluded: 'Aqua Light Sunscreen' },
+                                    { name: 'Product 5', price: 'Rp. 99.000', imgSrc: 'images/product_5.jpg', usersIncluded: 'Niacinamide Clay Stick' },
+                                    { name: 'Product 6', price: 'Rp. 150.000', imgSrc: 'images/product_6.jpg', usersIncluded: 'Retinol Moisturizer' },
+                                    { name: 'Product 7', price: 'Rp. 200.000', imgSrc: 'images/product_7.jpg', usersIncluded: '5X Ceramide Sunscreen' },
+                                    { name: 'Product 8', price: 'Rp. 250.000', imgSrc: 'images/product_8.jpg', usersIncluded: 'Brightening Moisture' },
+                                    { name: 'Product 9', price: 'Rp. 99.000', imgSrc: 'images/product_9.png', usersIncluded: 'Set Brightening' },
+                                    { name: 'Product 10', price: 'Rp. 150.000', imgSrc: 'images/product_10.png', usersIncluded: 'Set Acne' },
+                                ];
+                        
+                                const productListContainer = document.getElementById('product-list');
+                        
+                                products.forEach(product => {
+                                    const productCol = document.createElement('div');
+                                    productCol.className = 'col';
+                        
+                                    productCol.innerHTML = `
+                                        <div class="card mb-4 rounded-3 shadow-sm">
+                                            <div class="card-body">
+                                                <img src="${product.imgSrc}" alt="" class="header-img" style="width:100%; height:auto;">
+                                                <h4 class="text-orange fw-bold">${product.price}</h4>
+                                                <ul class="list-unstyled mt-3 mb-4">
+                                                    <li>${product.usersIncluded}</li>  
+                                                </ul>
+                                                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    `;
+                        
+                                    productListContainer.appendChild(productCol);
+                                });
+                            </script>
+                        </div>
+                    </main><br><br><br>
+
+                    <!-- video -->
+                    <div id="video" class="video-section mt-5">
+                        <div class="container text-center">
+                            <div class="video-wrapper">
+                                <iframe title="Product Video" src="https://www.youtube.com/embed/XX4KoATJ34g?playsinline=1&amp;autoplay=1&amp;controls=0&amp;mute=1&amp;loop=1&amp;playlist=XX4KoATJ34g&amp;enablejsapi=1&amp;rel=0&amp;modestbranding=1&amp;origin=https%3A%2F%2Fskintific.com"
+                                    allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div><br><br><br>
+
+                    <!-- Review -->
+                    <div id="review">
+                        <div class="container px-4 pb-5" style="padding-top: 7rem;">
+                            <h2 class="pb-5 border-bottom">Customer's Review</h2><br><br>
+                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                                <div class="feature col">
+                                    <div class="feature-icon-char d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                                        <img src="images/char1.jpg" alt="" class="header-img">
+                                    </div>
+                                    <h3 class="fs-2 text-body-emphasis">Jang Wonyoung</h3>
+                                    <div class="rating">
+                                        <p>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bx-star fs-4 star-filled">&nbsp;<span class="text-orange fw-semibold"> 4,9</span></i>
+                                        </p>
+                                    </div>
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just 
+                                        keep going until we run out of words.</p>
+                                    <a href="#" class="icon-link">
+                                        Call to Action
+                                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <div class="feature-icon-char d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                                        <img src="images/char2.jpg" alt="" class="header-img">
+                                    </div>
+                                    <h3 class="fs-2 text-body-emphasis">Na Jaemin</h3>
+                                    <div class="rating">
+                                        <p>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid">&nbsp;<span class="text-orange fw-semibold"> 5,0</span></i>
+                                        </p>
+                                    </div>
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="#" class="icon-link">
+                                    Call to action
+                                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                                    </a>
+                                </div>
+                                <div class="feature col">
+                                    <div class="feature-icon-char d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                                        <img src="images/char3.jpg" alt="" class="header-img">
+                                    </div>
+                                    <h3 class="fs-2 text-body-emphasis">Kim Garam</h3>
+                                    <div class="rating">
+                                        <p>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bxs-star fs-4 star-filled solid"></i>
+                                            <i class="bx bx-star fs-4 star-filled">&nbsp;<span class="text-orange fw-semibold"> 4,9</span></i>
+                                        </p>
+                                    </div>
+                                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <a href="#" class="icon-link">
+                                    Call to action
+                                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About us -->
+                    <section id="contact" class="contact section-padding" data-scroll-index='6'>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 pt-5 border-top"><br><br><br><br>
+                              <div class="sectioner-header text-center">
+                                <h2>Contact us</h2><br><br>
+                                <span class="line"></span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laboriosam, quibusdam alias quod dignissimos 
+                                    tempora excepturi cupiditate a magni expedita autem, deserunt nihil assumenda enim nostrum? Nihil ex quia 
+                                    voluptates praesentium ratione, temporibus nulla officia non dolorum porro, atque tempore. Natus eligendi, a molestias porro corporis ipsum delectus et recusandae!</p>
+                              </div><br><br><br>
+                              <div class="section-content">
+                                <div class="row">
+                                  <div class="col-sm-12 col-md-12 col-lg-8">
+                                    <form id="contact_form" action="">
+                                      <div class="row">
+                                        <div class="col">
+                                          <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required>
+                                        </div>
+                                        <div class="col">
+                                          <input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required>
+                                        </div>
+                                      </div>
+                                      <input type="text" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
+                                      <textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>
+                                      <button class="btn-grad w-100 text-uppercase" type="submit" name="button">submit</button>
+                                    </form>
+                                  </div>
+                                  <div class="col-sm-12 col-md-12 col-lg-4">
+                                    <div class="contact-info white">
+                                      <div class="contact-item media"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
+                                        <div class="media-body">
+                                          <p class="text-uppercase">Address</p>
+                                          <p class="text-uppercase">New Delhi, India</p>
+                                        </div>
+                                      </div>
+                                      <div class="contact-item media"> <i class="fa fa-mobile media-left media-right-margin"></i>
+                                        <div class="media-body">
+                                          <p class="text-uppercase">Phone</p>
+                                          <p class="text-uppercase"><a class="text-white" href="tel:+15173977100">009900990099</a> </p>
+                                        </div>
+                                      </div>
+                                      <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
+                                        <div class="media-body">
+                                          <p class="text-uppercase">E-mail</p>
+                                          <p class="text-uppercase"><a class="text-white" href="mailto:abcdefg@gmail.com">yogeshsingh.now@gmail.com</a> </p>
+                                        </div>
+                                      </div>
+                                      <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin"></i>
+                                        <div class="media-body">
+                                          <p class="text-uppercase">Working Hours</p>
+                                          <p class="text-uppercase">Mon-Fri 9.00 AM to 5.00PM.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+
+                </div>
+            </section><br>
+        </header>
+
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup" id="popup">
+            <h2>Item Added to Cart</h2>
+            <p>Your item has been added to the cart successfully!</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="javascript.js"></script>
+    </body>
+</html>
