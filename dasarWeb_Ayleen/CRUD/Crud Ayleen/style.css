@@ -1,0 +1,18 @@
+body {
+    background-image: url(imagee.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.card { 
+    margin-top: 50px; 
+}
+        
+.container { 
+    width: 1000px; 
+}
+
+.card-header { 
+    background-color: #b2cafc; 
+    font-weight: bold; 
+}
